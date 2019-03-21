@@ -9,9 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>jdk5</artifactId>
+    <artifactId>jdk8</artifactId>
 
-    <name>jdk5</name>
+    <name>jdk8</name>
+    <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
     <properties>
