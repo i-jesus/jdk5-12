@@ -10,7 +10,7 @@ import org.junit.Test;
 public class AppTest 
 {
     /**
-     * Rigorous Test :-)
+     * Rigorous TestEnum :-)
      */
     @Test
     public void shouldAnswerWithTrue()
