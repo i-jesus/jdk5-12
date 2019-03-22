@@ -13,7 +13,7 @@ public class Order {
     // 订单用户id
     private Integer userId;
     // 订单编号
-    private  String orderNo;
+    private String orderNo;
     // 订单日期
     private Date orderDate;
     // 收货地址
@@ -54,13 +54,34 @@ public class Order {
                 '}';
     }
 
+    /**
+     * 重写 equals 方法
+     * @param obj
+     * @return
+     */
     @Override
     public boolean equals(Object obj) {
-        boolean flag=false;
-        if(obj instanceof  Order){
-            return this.orderNo.equals(((Order) obj).getOrderNo());
+        boolean flag = false;
+        if (obj == null) {
+            return flag;
         }
-        return flag;
+        Order order = (Order) obj;
+        if (this == order) {
+            return true;
+        } else {
+            return (this.orderNo.equals(order.orderNo));
+        }
+    }
+
+    /**
+     * 重写hashcode方法
+     * @return
+     */
+    @Override
+    public int hashCode() {
+        int hashno = 7;
+        hashno = 13 * hashno + (orderNo == null ? 0 : orderNo.hashCode());
+        return hashno;
     }
 
     public Order() {
