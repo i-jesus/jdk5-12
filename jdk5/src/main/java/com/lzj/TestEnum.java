@@ -1,5 +1,7 @@
 package com.lzj;
 
+import java.util.Iterator;
+
 /**
  * @author lp
  * @Date 2019/3/21 16:47
@@ -75,5 +77,6 @@ public class TestEnum {
 
         //ordinal()， 返回值是从 0 开始
         System.out.println("ordinal(): " + colorEnum.ordinal());
+
     }
 }
