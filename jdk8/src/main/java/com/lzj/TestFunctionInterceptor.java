@@ -20,14 +20,13 @@ public class TestFunctionInterceptor {
         /**
          * 借助Lambda表达式实现Predicate test方法
          */
-        /* Predicate<String> p01=(str)->str.isEmpty()||str.trim().isEmpty();
-         *//**
-         * 测试传入的字符串是否为空
-         *//*
+         Predicate<String> p01=(str)->str.isEmpty()||str.trim().isEmpty();
+         /**
+         * 测试传入的字符串是否为空*/
+
         System.out.println(p01.test(""));
         System.out.println(p01.test("  "));
         System.out.println(p01.test("admin"));
-*/
 
 
         /**
@@ -62,6 +61,9 @@ public class TestFunctionInterceptor {
             return new SessionFactory();
         };
         s.get().info();
+
+        SessionFactory s02 = new SessionFactory();
+
     }
 }
 
