@@ -1,7 +1,8 @@
-package com.lzj.po;
+package com.lzj;
 
 import com.lzj.Phone;
 import com.lzj.PrintFunction;
+import com.lzj.po.IPhone;
 
 import java.util.Arrays;
 import java.util.List;
