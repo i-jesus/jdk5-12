@@ -22,12 +22,16 @@ public class Order {
     private Date createDate;
     // 更新时间
     private Date updateDate;
-    // 订单状态  0-未支付  1-已支付  2-代发货  3-已发货  4-已接收  5-已完成
+    // 订单状态  0-未支付  1-已支付  2-待发货  3-已发货  4-已接收  5-已完成
     private Integer status;
     // 是否有效  1-有效订单  0-无效订单
     private Integer isValid;
 
-    public Order(Integer id, Integer userId, String orderNo, Date orderDate, String address, Date createDate, Date updateDate, Integer status, Integer isValid) {
+    //订单总金额
+    private  Double total;
+
+    public Order(Integer id, Integer userId, String orderNo, Date orderDate, String address,
+                 Date createDate, Date updateDate, Integer status, Integer isValid,Double total) {
         this.id = id;
         this.userId = userId;
         this.orderNo = orderNo;
@@ -37,6 +41,15 @@ public class Order {
         this.updateDate = updateDate;
         this.status = status;
         this.isValid = isValid;
+        this.total=total;
+    }
+
+    public Double getTotal() {
+        return total;
+    }
+
+    public void setTotal(Double total) {
+        this.total = total;
     }
 
     @Override
