@@ -11,4 +11,5 @@ public class M2sPhone implements Phone,MiPhone {
     public static void main(String[] args) {
         new M2sPhone().info();
     }
+
 }
