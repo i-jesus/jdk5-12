@@ -1,12 +1,8 @@
 package com.lotbyte.def.method;
 
 import com.lotbyte.def.method.inte.MyArrayList;
-import com.lotbyte.def.method.inte.MyList;
 import com.lotbyte.def.method.po.UserDto;
 
-import java.util.ArrayList;
-import java.util.function.Consumer;
-import java.util.function.Function;
 
 
 /**
@@ -37,8 +33,6 @@ public class TestDefaultMethod_01 {
         // 使用Java8 提供的默认方法实现集合遍历
         System.out.println("----------集合遍历-->增强的List接口默认方法---------");
         uList.forEach(System.out::println);
-
-
 
     }
 }
