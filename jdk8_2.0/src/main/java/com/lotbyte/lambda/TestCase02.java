@@ -1,6 +1,6 @@
 package com.lotbyte.lambda;
 
-import com.lotbyte.po.Goods;
+import com.lotbyte.lambda.po.Goods;
 
 import java.math.BigDecimal;
 import java.util.*;
@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
  * @Version 1.0
  * 热销商品排序
  */
-public class TestLambda02 {
+public class TestCase02 {
     public static void main(String[] args) {
         /**
          * 实际开发数据通常从数据库获取
@@ -24,7 +24,6 @@ public class TestLambda02 {
         Goods g04=new Goods(4,"魅族 Note9",2000,1600, BigDecimal.valueOf(1600));
         Goods g05=new Goods(5,"一加6T",8000,5000, BigDecimal.valueOf(3500));
         List<Goods> goods= Arrays.asList(g01,g02,g03,g04,g05);
-
         System.out.println("-----------商品排序前--------------");
         for(Goods g:goods){
             System.out.println(g);
@@ -45,16 +44,16 @@ public class TestLambda02 {
          }
 
         // 使用Lambda 对商品记录按销量进行排序
-       /* goods.sort((g1,g2)->g1.getSale()-g2.getSale());
+        goods.sort((g1,g2)->g1.getSale()-g2.getSale());
         System.out.println("-----------商品排序后--------------");
-        goods.forEach(System.out::println);*/
+        goods.forEach(System.out::println);
 
         // 多个条件排序情况 Lambda 配置Stream  销量+价格排序  销量相等时按照价格排序
-/*        goods =goods.stream().sorted((g1,g2)->g1.getSale()-g2.getSale())
+        goods =goods.stream().sorted((g1,g2)->g1.getSale()-g2.getSale())
                 .sorted((g1,g2)->g1.getPrice().compareTo(g2.getPrice()))
                 .collect(Collectors.toList());
         System.out.println("-----------商品排序后--------------");
-        goods.forEach(System.out::println);*/
+        goods.forEach(System.out::println);
 
         goods.sort(Comparator.comparing(Goods::getSale).thenComparing(Goods::getPrice));
         System.out.println("-----------商品排序后--------------");
