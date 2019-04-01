@@ -1,24 +1,38 @@
 package com.lotbyte.def.method;
 
-import java.util.Optional;
-import java.util.Properties;
+import com.lotbyte.def.method.inte.MyArrayList;
+import com.lotbyte.def.method.po.UserDto;
+
+
 
 /**
  * @author lp
- * @Date 2019/4/1 11:42
+ * @Date 2019/3/27 17:13
  * @Version 1.0
- * 案例1-properties 文件读取
  */
 public class TestCase01 {
+    private static MyArrayList<UserDto> uList;
+    static  {
+        uList=  new MyArrayList<>();
+        uList.add(new UserDto(35,"zs","126xxx@126.com",800,"lv4"));
+        uList.add(new UserDto(60,"js_li","157xxx@139.com",500,"lv3"));
+        uList.add(new UserDto(78,"fc_007","126@126.com",260,"lv2"));
+    }
+
     public static void main(String[] args) {
-        // 使用Optinal 防止空指针
-       Optional<Properties> optinal= BaseRepository.getPropertiesInfo02("jdbc.properties");
-       optinal.ifPresent((prop)->{
-           System.out.println("driver-->"+prop.get("jdbc.driver")
-                   +"-->"+prop.get("jdbc.url")
-                   +"-->"+prop.get("jdbc.user")
-                   +"-->"+prop.get("jdbc.password"));
-       });
+        /**
+         * 这里以测试数据为例
+         */
+        System.out.println("----------集合遍历-->原始遍历方法---------");
+        for(UserDto u:uList){
+            System.out.println(u);
+        }
+        System.out.println("----------集合遍历-->自定义接口默认方法---------");
+        // 使用自定义的接口默认方法实现集合元素遍历
+        uList.myForeach(uList);
+        // 使用Java8 提供的默认方法实现集合遍历
+        System.out.println("----------集合遍历-->增强的List接口默认方法---------");
+        uList.forEach(System.out::println);
 
     }
 }

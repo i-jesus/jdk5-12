@@ -1,16 +1,24 @@
 package com.lotbyte.def.method;
 
-import com.lotbyte.def.method.data.UserRepository;
+import java.util.Optional;
+import java.util.Properties;
 
 /**
  * @author lp
- * @Date 2019/4/1 12:02
+ * @Date 2019/4/1 11:42
  * @Version 1.0
- *  案例03  接口方法测试
+ * 案例1-properties 文件读取
  */
 public class TestCase03 {
     public static void main(String[] args) {
-        // 此时就近原则
-        new UserRepository().findAll();
+        // 使用Optinal 防止空指针
+       Optional<Properties> optinal= BaseRepository.getPropertiesInfo02("jdbc.properties");
+       optinal.ifPresent((prop)->{
+           System.out.println("driver-->"+prop.get("jdbc.driver")
+                   +"-->"+prop.get("jdbc.url")
+                   +"-->"+prop.get("jdbc.user")
+                   +"-->"+prop.get("jdbc.password"));
+       });
+
     }
 }
