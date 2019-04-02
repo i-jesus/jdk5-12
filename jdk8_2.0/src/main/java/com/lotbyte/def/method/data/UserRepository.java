@@ -1,6 +1,6 @@
 package com.lotbyte.def.method.data;
 
-import com.lotbyte.po.User;
+import com.lotbyte.def.method.po.User;
 import org.springframework.data.domain.Page;
 
 import java.util.List;

@@ -44,7 +44,12 @@ public class TestCase02 {
          }
 
         // 使用Lambda 对商品记录按销量进行排序
+
+
         goods.sort((g1,g2)->g1.getSale()-g2.getSale());
+
+
+
         System.out.println("-----------商品排序后--------------");
         goods.forEach(System.out::println);
 
@@ -61,5 +66,9 @@ public class TestCase02 {
         goods.stream().sorted(Comparator.comparingInt(Goods::getSale).thenComparing(Goods::getPrice))
                 .collect(Collectors.toList()).forEach(System.out::println);
         //goods.stream().map()
+
+        goods.forEach((g)->{
+            System.out.println(g);
+        });
     }
 }

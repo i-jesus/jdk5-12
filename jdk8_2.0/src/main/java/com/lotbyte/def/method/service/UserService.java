@@ -1,6 +1,7 @@
 package com.lotbyte.def.method.service;
 
-import com.lotbyte.po.User;
+
+import com.lotbyte.def.method.po.User;
 
 /**
  * @author lp
