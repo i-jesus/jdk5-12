@@ -14,6 +14,8 @@ import java.util.stream.Stream;
  * @author lp
  * @Date 2019/4/4 15:54
  * @Version 1.0
+ *
+ * 创建流5种方式
  */
 public class TestCase01 {
     public static void main(String[] args) {
