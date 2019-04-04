@@ -13,6 +13,13 @@ public class User {
     private String userName;
     private String addr;
 
+
+    public User(Integer id, String userName, String addr) {
+        this.id = id;
+        this.userName = userName;
+        this.addr = addr;
+    }
+
     public User() {
     }
 
@@ -24,6 +31,8 @@ public class User {
         this.id = id;
         this.userName = userName;
     }
+
+
 
     public Integer getId() {
         return id;
