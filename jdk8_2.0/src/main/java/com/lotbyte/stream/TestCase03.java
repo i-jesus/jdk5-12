@@ -106,7 +106,7 @@ public class TestCase03 {
                 .collect(Collectors.toList()));
 
 
-        // 筛选有效订单 并收集订单号 与 订单金额
+        // 筛选有效订单 并收集订单号与订单金额
         Map<String, Double> map = ordersList.stream()
                 .filter((order) -> order.getIsValid() == 1)
                 .collect(Collectors.toMap(Order::getOrderNo, Order::getTotal));

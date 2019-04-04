@@ -38,7 +38,7 @@ public class TestCase02 {
     }
 
     /**
-     * 筛选和切面基本操作
+     * 筛选和切片基本操作
      */
     public static void test01() {
         // 过滤有效订单 并打印到控制台
